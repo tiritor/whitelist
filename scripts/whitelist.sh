@@ -20,6 +20,7 @@ if [ "$(id -u)" != "0" ] ; then
 fi
 
 curl -sS https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt | sudo tee -a "${PIHOLE_LOCATION}"/whitelist.txt >/dev/null
+curl -sS https://raw.githubusercontent.com/raghavdua1995/DNSlock-PiHole-whitelist/master/whitelist.list | sudo tee -a "${PIHOLE_LOCATION}"/whitelist.txt >/dev/null
 echo -e " ${TICK} \e[32m Adding domains to whitelist... \e[0m"
 sleep 0.1
 echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
